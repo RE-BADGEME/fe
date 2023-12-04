@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# REBEDGE-ME
 
-## Getting Started
+매번 shield.IO에서 뱃지를 생성하기 귀찮아서 프로젝트 초기에 npm install 명령어와
+함께 구성할 수 있도록 하는 웹 사이트
 
-First, run the development server:
+## 프로젝트 목표
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+👩‍💻 리드미에 들어갈 BEDGE 한번에 보여줄 수 있는 기능 완성
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧠 NEXT JS 14 APP routing 버전 공부
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👯‍♀️ 다양한 언어를 적용할 수 있는 다국적 웹
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🤔 AWS ec2와 route53을 활용한 직접 배포
 
-## Learn More
+💬 구글 애널리틱스 도입
 
-To learn more about Next.js, take a look at the following resources:
+✅ yml파일로 issue와 pr template 관리
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📫 월 사용자 본인 제외 30명 달성 (GA로 파악)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## **💫 커밋 컨벤션**
 
-## Deploy on Vercel
+**Feat**: 기능 구현
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Fix**: 수정
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Docs** : 문서 작성
+
+**Review**: 리뷰 반영
+
+**Refactoring**: 개선
+
+**Chore**: 기타 등등
+
+## 🔗 Links
+
+- 기획안 작성한 피그마 링크
+  [![FIGMA](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/wwBhV6E4GxZ40tfZTM22oC/Untitled?type=whiteboard&node-id=0%3A1&t=Pvs6kZlJiCS8480b-1)
