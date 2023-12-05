@@ -3,15 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm i
+        - npm ci
     build:
       commands:
-        - nvm install 20.0.0
         - npm run build
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - node_modules/**/*
