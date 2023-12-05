@@ -6,7 +6,6 @@ frontend:
         - npm i
     build:
       commands:
-        - nvm install 20.0.0
         - npm run build
   artifacts:
     baseDirectory: .next
