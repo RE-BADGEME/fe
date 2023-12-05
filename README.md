@@ -85,6 +85,16 @@
 
 📫 월 사용자 본인 제외 30명 달성 (GA로 파악)
 
+## Tech Stack
+
+**Framework:** Next JS
+
+**Lint:** Prettier, ESLint, Husky, Typescript
+
+**State Management:** Tanstack-Query, Recoil
+
+**Styling:** Tailwindcss
+
 ## **💫 커밋 컨벤션**
 
 **Feat**: 기능 구현
