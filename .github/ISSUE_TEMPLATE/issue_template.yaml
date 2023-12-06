@@ -1,0 +1,51 @@
+name: ISSUE TEMPLATE
+description: File a ISSUE TEMPLATE
+title: '[ISSUE]: '
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        REBADGEME ISSUE TEMPLATE입니다!
+
+  - type: input
+    id: title
+    attributes:
+      label: 🟠 작업 내용
+      description: 해야할 작업에 대해서 간단하게 적어주세요
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 🔵 상새한 작업 내용
+      description: 상새한 작업 내용을 적어주세요
+      placeholder: '- 리드미 작성'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 🟡 예상 소요시간
+      multiple: false
+      options:
+        - 하루 이상
+        - 12시간 이내
+        - 5시간 이내
+        - 3시간 이내
+        - 1시간 이내
+        - 30분 이내
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 언제나 화이팅!!
+      options:
+        - label:
+            소중한 시간 내주셔서 감사합니다. 🙇‍♂️ 꼭 포트폴리에 좋은 작업으로
+            기록될 수 있도록 노력하겠습니다. ISSUE 제작자분의 노고의 항상
+            감사드립니다. 🧡💛
+          required: true
