@@ -6,7 +6,7 @@ title: '[PR] '
 
 body:
   - type: markdown
-    label: 🟠 작업 내용 이슈 번호
+    label: 🖋  작업 내용 이슈 번호
     required: true
 
   - name: checklist
