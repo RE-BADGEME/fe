@@ -3,4 +3,4 @@
 
 echo "허스키가 돌아갑니다. 🐶"
 
-npx tsc --noEmit && npx eslint --fix . && npx prettier --write .
+npx lint-staged
