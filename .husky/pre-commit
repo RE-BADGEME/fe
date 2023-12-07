@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "허스키가 돌아갑니다. 🐶"
+
+npx lint-staged

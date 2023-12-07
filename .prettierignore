@@ -1,0 +1,6 @@
+## prettier ignore할 파일을 올려주세요
+.next
+next-env.d.ts
+package-lock.json
+public
+node_modules
