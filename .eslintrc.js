@@ -8,6 +8,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
   },
 
   settings: {
@@ -20,9 +21,9 @@ module.exports = {
   extends: [
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
     'airbnb',
     'prettier',
-    'plugin:prettier/recommended',
   ],
 
   rules: {
@@ -36,7 +37,9 @@ module.exports = {
         tsx: 'never',
       },
     ],
-
+    'react/function-component-definition': 'off',
+    'arrow-body-style': 'off',
+    'no-useless-catch': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-var-requires': 'off',
