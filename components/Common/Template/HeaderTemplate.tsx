@@ -7,7 +7,7 @@ const HeaderTemplate = ({ children }: { children: ReactNode }) => {
       <div className="absolute w-full z-50">
         <NavbarSimple />
       </div>
-      <div className="absolute w-full top-16 pt-3 bg-blue-gray-50">
+      <div className="absolute w-full flex flex-col items-center top-16 pt-3 bg-blue-gray-50">
         {children}
       </div>
     </section>
