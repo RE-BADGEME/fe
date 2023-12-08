@@ -1,7 +1,11 @@
-import React from 'react';
+import HeaderTemplate from '@/components/Common/Template/HeaderTemplate';
 
 const Page = () => {
-  return <div>HOME HELLO</div>;
+  return (
+    <HeaderTemplate>
+      <div>안녕</div>
+    </HeaderTemplate>
+  );
 };
 
 export default Page;

@@ -46,5 +46,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-nested-ternary': 'off',
     'react/jsx-filename-extension': 'off',
+    'react/jsx-curly-brace-presence': 'off',
   },
 };

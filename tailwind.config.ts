@@ -12,6 +12,27 @@ const config: Config = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '443px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+
+      colors: {
+        primary: '#3f51b5',
+        secondary: '#f50057',
+        success: '#4caf50',
+        info: '#00acc1',
+        warning: '#ff9800',
+        error: '#f44336',
+        light: '#f5f5f5',
+        dark: '#212121',
+        white: '#ffffff',
+        transparent: 'transparent',
+        current: 'currentColor',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
