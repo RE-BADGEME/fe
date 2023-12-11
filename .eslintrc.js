@@ -45,7 +45,10 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-nested-ternary': 'off',
+    'class-methods-use-this': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-curly-brace-presence': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
   },
 };

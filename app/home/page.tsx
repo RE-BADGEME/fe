@@ -1,9 +1,10 @@
 import HeaderTemplate from '@/components/Common/Template/HeaderTemplate';
+import Banner from '@/components/Home/Banner/Banner';
 
 const Page = () => {
   return (
     <HeaderTemplate>
-      <div>안녕</div>
+      <Banner />
     </HeaderTemplate>
   );
 };
