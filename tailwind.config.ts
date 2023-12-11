@@ -20,10 +20,10 @@ const config: Config = withMT({
       },
 
       colors: {
-        primary: '#3f51b5',
-        secondary: '#f50057',
-        success: '#4caf50',
-        info: '#00acc1',
+        primary: '#FF7B00',
+        secondary: '#FD2B75',
+        success: '#004B02',
+        info: '#37E8FF',
         warning: '#ff9800',
         error: '#f44336',
         light: '#f5f5f5',
