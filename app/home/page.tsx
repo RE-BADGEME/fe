@@ -5,20 +5,17 @@ import { getCurrentUrl } from '@/utils/getCurrentUrl';
 
 const Page = async () => {
   const url = getCurrentUrl();
-  console.log(url);
   const fetchHello = async () => {
     const response = await fetch(`${url}/api/items/get`, {
       method: 'GET',
     });
 
     const data = await response.json();
-    console.log(data);
 
     return data;
   };
 
   const data = await fetchHello();
-  console.log(data);
 
   return (
     <HeaderTemplate>
