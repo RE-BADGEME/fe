@@ -6,9 +6,9 @@ frontend:
         - npm i
     build:
       commands:
-        - ACCESS_KEY_ID = ./env
-        - SECRET_ACCESS_KEY = ./env
-        - npm run build
+        - npm run build:$BUILD_ENV
+        - echo "ACCESS_KEY_ID=$ACCESS_KEY_ID" >> .env
+        - echo "SECRET_ACCESS_KEY=$SECRET_ACCESS_KEY" >> .env
   artifacts:
     baseDirectory: .next
     files:
