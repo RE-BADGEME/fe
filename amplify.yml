@@ -4,15 +4,6 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        # Fetch ACCESS_KEY_ID and SECRET_ACCESS_KEY from AWS Systems Manager Parameter Store
-        - export ACCESS_KEY_ID=$(aws ssm get-parameter --name /amplify/REBADGE-ME/ap-northeast-2/ACCESS_KEY_ID --with-decryption --query "Parameter.Value" --output text)
-        - export SECRET_ACCESS_KEY=$(aws ssm get-parameter --name /amplify/REBADGE-ME/ap-northeast-2/SECRET_ACCESS_KEY --with-decryption --query "Parameter.Value" --output text)
-        # Print the values to verify
-        - echo "ACCESS_KEY_ID=$ACCESS_KEY_ID"
-        - echo "SECRET_ACCESS_KEY=$SECRET_ACCESS_KEY"
-        # Set the environment variables for the build process
-        - export ACCESS_KEY_ID
-        - export SECRET_ACCESS_KEY
     build:
       commands:
         - env | grep -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY >> .env.production
