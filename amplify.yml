@@ -3,9 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm i
+        - npm ci
     build:
       commands:
+        - env | grep -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
@@ -14,3 +15,4 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - .next/cache/**/*
