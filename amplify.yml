@@ -4,13 +4,9 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        - export ACCESS_KEY_ID=$(aws ssm get-parameter --name /amplify/dhtne0omq4aqb/prod/ACCESS_KEY_ID --with-decryption --query "Parameter.Value" --output text)
-        - export SECRET_ACCESS_KEY=$(aws ssm get-parameter --name /amplify/dhtne0omq4aqb/prod/SECRET_ACCESS_KEY --with-decryption --query "Parameter.Value" --output text)
-        - echo "ACCESS_KEY_ID=$ACCESS_KEY_ID" >> .env.production
-        - echo "SECRET_ACCESS_KEY=$SECRET_ACCESS_KEY" >> .env.production
-        - npm ci
     build:
       commands:
+        - env | grep -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
