@@ -3,6 +3,7 @@ import React from 'react';
 import { Inter } from 'next/font/google';
 import ClientProvider from '@/components/Provider/ClientProvider';
 import './globals.css';
+import GAProvider from '@/components/Provider/GAProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GAProvider />
       <body className={inter.className}>
         <ClientProvider>{children}</ClientProvider>
       </body>
