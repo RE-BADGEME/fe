@@ -21,10 +21,10 @@ function NavList() {
         className="p-1 font-medium"
       >
         <Link
-          href={'/home'}
+          href={'/dashboard/selection'}
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Pages
+          selection
         </Link>
       </Typography>
       <Typography
@@ -34,10 +34,10 @@ function NavList() {
         className="p-1 font-medium"
       >
         <Link
-          href={'/home'}
+          href={'/dashboard/result'}
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Account
+          result
         </Link>
       </Typography>
       <Typography
@@ -88,12 +88,11 @@ const NavbarSimple = () => {
     <Navbar className="mx-auto w-full rounded-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
-          as="a"
-          href="#"
+          as="span"
           variant="h6"
           className="mr-4 cursor-pointer py-1.5"
         >
-          REBADGE-ME
+          <Link href={'/home'}>REBADGE-ME</Link>
         </Typography>
         <div className="hidden lg:block">
           <NavList />
