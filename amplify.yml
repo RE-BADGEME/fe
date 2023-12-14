@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - env | grep -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY >> .env.production
+        - env | grep -e ACCESS_KEY_ID -e SECRET_ACCESS_KEY -e GA_MEASUREMENT_ID >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next

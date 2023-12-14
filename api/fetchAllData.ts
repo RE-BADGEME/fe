@@ -8,7 +8,7 @@ import { getCurrentUrl } from '@/utils/getCurrentUrl';
 
 const fetchAllData = async () => {
   const url = getCurrentUrl();
-  const response = await fetch(`${url}/api/v1/category`);
+  const response = await fetch(`${url}/api/v1/badge`);
 
   if (!response.ok) {
     throw new Error(response.statusText);

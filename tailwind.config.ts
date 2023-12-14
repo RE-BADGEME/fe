@@ -20,16 +20,16 @@ const config: Config = withMT({
       },
 
       colors: {
-        primary: '#FF7B00',
-        secondary: '#FD2B75',
+        primary: '#F27B50',
+        secondary: '#F2B872',
         success: '#004B02',
-        info: '#37E8FF',
+        basic: '#F2CFC2',
         warning: '#ff9800',
         error: '#f44336',
-        light: '#f5f5f5',
-        dark: '#212121',
         white: '#ffffff',
         transparent: 'transparent',
+        text: '#0D0D0D',
+        backgroud: '#F2F2F2',
         current: 'currentColor',
       },
 

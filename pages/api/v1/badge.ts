@@ -8,11 +8,21 @@ const handler: NextApiHandler = async (
 ) => {
   if (req.method !== 'GET') return res.status(405).end();
 
-  const { Items } = await ddbDocClient.send(
-    new ScanCommand({ TableName: 'BADGE' }),
-  );
+  try {
+    const command = new ScanCommand({
+      TableName: 'BADGE-TABLE',
+    });
 
-  return res.status(200).json({ categories: Items });
+    const { Items } = await ddbDocClient.send(command);
+
+    if (!Items) {
+      return res.status(404).json({ error: 'Not Found' });
+    }
+
+    return res.status(200).json({ categories: Items });
+  } catch (error) {
+    return res.status(500).json({ error });
+  }
 };
 
 export default handler;
