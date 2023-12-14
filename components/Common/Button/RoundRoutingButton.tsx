@@ -30,7 +30,7 @@ const RoundRoutingButton = ({
       onClick={handleClick}
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.05 }}
-      className={`bg-${color} whitespace-nowrap p-2 rounded-md shadow-md`}
+      className={`bg-${color} whitespace-nowrap p-2 rounded-md animate-none hover:animate-pulse shadow-lg`}
     >
       {children}
     </motion.button>

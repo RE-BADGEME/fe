@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
   async redirects() {
     /**
      * @type {import('next').Redirect[]}
