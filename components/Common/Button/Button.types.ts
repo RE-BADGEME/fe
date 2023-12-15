@@ -5,3 +5,8 @@ export type RoundRoutingButtonProps = {
   routingPath?: string;
   color?: string;
 };
+
+export type SimpleButtonProps = {
+  children: ReactNode;
+  color?: string;
+};

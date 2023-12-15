@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    dangerouslyAllowSVG: true,
+    domains: ['avatars.githubusercontent.com', 'img.shields.io'],
   },
   async redirects() {
     /**
