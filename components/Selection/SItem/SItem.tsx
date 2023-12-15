@@ -20,7 +20,7 @@ const SItem = ({ item }: { item: DataType }) => {
           href={item.homepage}
           target="_blank"
           rel="noopener noreferrer"
-          className="mx-auto bg-basic rounded-md p-1 text-center whitespace-nowrap hover:ring hover:ring-primary"
+          className="mx-auto bg-basic rounded-md p-1 text-center whitespace-nowrap hover:ring hover:ring-success"
         >
           홈페이지 바로가기
         </a>
