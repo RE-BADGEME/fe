@@ -21,18 +21,17 @@ const config: Config = withMT({
       },
 
       colors: {
-        primary: '#F27B50',
-        secondary: '#F2B872',
-        success: '#004B02',
+        primary: '#ff6e59',
+        secondary: '#ffece9',
+        success: '#4ab783',
         basic: '#F2CFC2',
         warning: '#ff9800',
-        error: '#f44336',
-        white: '#ffffff',
+        error: '#f36140',
         transparent: 'transparent',
         text: '#0D0D0D',
-        backgroud: '#F2F2F2',
-        current: 'currentColor',
-        cstroke: '#e65100',
+        backgroud: '#FaFaFa',
+        sub: '#673ce6',
+        sub2: '#e1d8fa',
       },
 
       backgroundImage: {

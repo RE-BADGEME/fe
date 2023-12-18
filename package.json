@@ -30,6 +30,7 @@
     "react-hook-form": "^7.48.2",
     "react-lottie-player": "^1.5.5",
     "recoil": "^0.7.7",
+    "recoil-persist": "^5.1.0",
     "swiper": "^11.0.5",
     "ts-jest": "^29.1.1",
     "xlsx": "^0.18.5",

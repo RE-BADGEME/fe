@@ -1,7 +1,7 @@
 import { QueryCommand } from '@aws-sdk/lib-dynamodb';
 import { NextApiHandler, NextApiResponse, NextApiRequest } from 'next';
 import { ddbDocClient } from '@/lib/ddbDocClient';
-import { basicSelection } from '@/constants/basic-selection';
+import { getCheckData } from '@/utils/getCheckData';
 
 const handler: NextApiHandler = async (
   req: NextApiRequest,
@@ -11,8 +11,16 @@ const handler: NextApiHandler = async (
 
   // parallel the query
   try {
-    const promise = basicSelection.map(async (item) => {
-      const { partition } = item;
+    const { query } = req.query;
+
+    // decode query
+    const decodeQuery = decodeURIComponent(query as string);
+
+    // parse query
+    const parseQuery = JSON.parse(decodeQuery);
+    const checkedQuery = getCheckData(parseQuery);
+
+    const promise = checkedQuery.map(async (item: string) => {
       const command = new QueryCommand({
         TableName: 'BADGE-TABLE',
         KeyConditionExpression: '#partition = :partition',
@@ -20,7 +28,7 @@ const handler: NextApiHandler = async (
           '#partition': 'partition',
         },
         ExpressionAttributeValues: {
-          ':partition': partition,
+          ':partition': item,
         },
       });
 

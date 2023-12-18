@@ -1,34 +1,112 @@
+export const defaultSelection = [
+  {
+    partition: 'skill',
+    name: 'SKILL',
+  },
+  {
+    partition: 'ui',
+    name: 'UI',
+  },
+  {
+    partition: 'test',
+    name: 'TEST',
+  },
+  {
+    partition: 'cloud',
+    name: 'CLOUD',
+  },
+  {
+    partition: 'lint',
+    name: 'LINT',
+  },
+];
+
+export const librarySelection = [
+  {
+    partition: 'util',
+    name: 'UTILITY',
+  },
+  {
+    partition: 'dnd',
+    name: 'DRAG & DROP',
+  },
+  {
+    partition: 'scroll',
+    name: 'SCROLL',
+  },
+  {
+    partition: 'valid',
+    name: 'VALIDATION',
+  },
+  {
+    partition: 'file',
+    name: 'FILE UPLOAD',
+  },
+  {
+    partition: 'form',
+    name: 'FORM',
+  },
+  {
+    partition: 'client',
+    name: 'CLIENT STATE MANAGEMENT',
+  },
+  {
+    partition: 'server',
+    name: 'SERVER STATE MANAGEMENT',
+  },
+  {
+    partition: 'swipe',
+    name: 'SWIPER',
+  },
+];
+
 export const basicSelection = [
   {
     partition: 'ide',
     name: 'IDE',
   },
   {
-    partition: 'office',
-    name: '협업툴',
-  },
-  {
-    partition: 'lint',
-    name: 'Lint',
-  },
-  {
-    partition: 'package',
-    name: '패키지 관리',
-  },
-  {
-    partition: 'test',
-    name: '테스트',
-  },
-  {
-    partition: 'cloud',
-    name: '클라우드',
+    partition: 'build',
+    name: 'BUILD',
   },
   {
     partition: 'platform',
-    name: '플랫폼',
+    name: 'PLATFORM',
   },
   {
-    partition: 'skill',
-    name: '기술 스택',
+    partition: 'package',
+    name: 'PACKAGE MANAGER',
   },
+  {
+    partition: 'office',
+    name: 'OFFICE TOOL',
+  },
+];
+
+export const selection = [
+  {
+    selectionName: 'Default Selection',
+    selection: defaultSelection,
+    selectionId: 'default-selection',
+  },
+  {
+    selectionName: 'Library Selection',
+    selection: librarySelection,
+    selectionId: 'library-selection',
+  },
+  {
+    selectionName: 'Basic Selection',
+    selection: basicSelection,
+    selectionId: 'basic-selection',
+  },
+];
+
+export const basicData = defaultSelection.map((item) => {
+  return item.partition;
+});
+
+export const allSelection = [
+  ...defaultSelection,
+  ...librarySelection,
+  ...basicSelection,
 ];
