@@ -8,12 +8,14 @@ const page = async () => {
   const data = await fetchBasicCategoryData();
 
   return (
-    <div className="flex flex-col items-center w-full">
-      <Banner />
-      <div className="w-full flex flex-col items-center gap-3">
-        {data.map((item: DataType[]) => {
-          return <SBanner key={item[0].partition} category={item} />;
-        })}
+    <div className="col-span-6 gap-3 bg-blue-400">
+      <div>
+        <Banner />
+        <div className="flex flex-col items-center gap-3">
+          {data.map((item: DataType[]) => {
+            return <SBanner key={item[0].partition} category={item} />;
+          })}
+        </div>
       </div>
     </div>
   );

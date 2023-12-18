@@ -13,7 +13,7 @@ const SItem = ({ item }: { item: DataType }) => {
         className="w-auto h-7 object-contain object-left"
       />
       <div className="flex flex-col gap-1">
-        <div className=" h-12">
+        <div className=" h-16">
           <strong>{item.name}</strong>
         </div>
         <a

@@ -1,10 +1,18 @@
 import { ReactNode } from 'react';
 import HeaderTemplate from '@/components/Common/Template/HeaderTemplate';
 
-export default function DashboardLayout({
-  children, // will be a page or nested layout
-}: {
+type Layouts = {
+  selection: ReactNode;
+  result: ReactNode;
   children: ReactNode;
-}) {
-  return <HeaderTemplate>{children}</HeaderTemplate>;
+};
+
+export default function Layout({ selection, result, children }: Layouts) {
+  return (
+    <HeaderTemplate>
+      {children}
+      {selection}
+      {result}
+    </HeaderTemplate>
+  );
 }

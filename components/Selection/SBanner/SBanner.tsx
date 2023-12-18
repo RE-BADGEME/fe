@@ -1,14 +1,16 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { memo } from 'react';
 import { useScroll } from 'framer-motion';
+
 import { DataType } from '@/types/fetchingDataTypes';
 import SItem from '../SItem/SItem';
 import ProgressCircleSVG from '@/public/svg/svgReactComponent/ProgressCircleSVG';
+import { useHorizontalScroll } from '@/hooks/useHorizontalScroll';
 
-const SBanner = ({ category }: { category: DataType[] }) => {
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
+const SBanner = memo(({ category }: { category: DataType[] }) => {
+  const scrollRef = useHorizontalScroll();
+  const { scrollXProgress } = useScroll({ container: scrollRef });
 
   return (
     <div className="w-full flex items-center justify-center bg-gradient-to-t from-primary to-secondary rounded-lg p-1 shadow-sm hover:ring hover:ring-blue-500">
@@ -19,8 +21,8 @@ const SBanner = ({ category }: { category: DataType[] }) => {
           <strong>{category[0].partition}</strong>
         </div>
         <div
-          className="w-full flex items-center gap-3 overflow-x-scroll p-3"
-          ref={ref}
+          className="w-full flex overflow-x-scroll items-center gap-3 p-3"
+          ref={scrollRef}
         >
           {category.map((item: DataType) => {
             return <SItem key={item.id} item={item} />;
@@ -29,6 +31,6 @@ const SBanner = ({ category }: { category: DataType[] }) => {
       </div>
     </div>
   );
-};
+});
 
 export default SBanner;

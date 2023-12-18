@@ -85,7 +85,7 @@ const NavbarSimple = () => {
   }, []);
 
   return (
-    <Navbar className="mx-auto w-full rounded-none">
+    <Navbar className="mx-auto w-full max-w-none rounded-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="span"
