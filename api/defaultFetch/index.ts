@@ -9,6 +9,9 @@ const fetchBasicCategoryData = async (query: string) => {
   const url = getCurrentUrl();
   const response = await fetch(
     `${url}/api/v1/partitions/default?query=${query}`,
+    {
+      cache: 'force-cache',
+    },
   );
 
   if (!response.ok) {

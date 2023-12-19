@@ -7,24 +7,16 @@ export const defaultSelection = [
     partition: 'ui',
     name: 'UI',
   },
-  {
-    partition: 'test',
-    name: 'TEST',
-  },
-  {
-    partition: 'cloud',
-    name: 'CLOUD',
-  },
-  {
-    partition: 'lint',
-    name: 'LINT',
-  },
 ];
 
 export const librarySelection = [
   {
     partition: 'util',
     name: 'UTILITY',
+  },
+  {
+    partition: 'lint',
+    name: 'LINT',
   },
   {
     partition: 'dnd',
@@ -37,6 +29,10 @@ export const librarySelection = [
   {
     partition: 'valid',
     name: 'VALIDATION',
+  },
+  {
+    partition: 'test',
+    name: 'TEST',
   },
   {
     partition: 'file',
@@ -64,6 +60,10 @@ export const basicSelection = [
   {
     partition: 'ide',
     name: 'IDE',
+  },
+  {
+    partition: 'cloud',
+    name: 'CLOUD',
   },
   {
     partition: 'build',

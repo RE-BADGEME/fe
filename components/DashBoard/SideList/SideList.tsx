@@ -2,17 +2,23 @@ import React from 'react';
 import { SelectionType } from '@/types/selectionTypes';
 import SideItem from '../SideItem/SideItem';
 
-const SideList = ({ selection }: { selection: SelectionType[] }) => {
+const SideList = ({
+  selection,
+  query,
+}: {
+  selection: SelectionType[];
+  query: string[];
+}) => {
   return (
-    <>
+    <div className="flex flex-col gap-1 divide-y divide-gray-300">
       {selection.map((item: SelectionType) => {
         return (
-          <ul key={item.name} className="border-2">
-            <SideItem sideItem={item} />
-          </ul>
+          <div key={item.name}>
+            <SideItem sideItem={item} query={query} />
+          </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

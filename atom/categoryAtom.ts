@@ -3,5 +3,16 @@ import { DataType } from '@/types/fetchingDataTypes';
 
 export const categoryAtom = atom<DataType[][]>({
   key: 'categoryAtom',
-  default: [],
+  default: [
+    [
+      {
+        homepage: '',
+        partition: '',
+        url: '',
+        id: '',
+        name: '',
+        install: '',
+      },
+    ],
+  ],
 });
