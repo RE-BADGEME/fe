@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
+  images: {
+    dangerouslyAllowSVG: true,
+    domains: ['avatars.githubusercontent.com', 'img.shields.io'],
+  },
   async redirects() {
     /**
      * @type {import('next').Redirect[]}
@@ -14,8 +19,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/dashboard',
-        destination: '/dashboard/selection',
+        source: '/dashboard/selection',
+        destination: '/dashboard',
         permanent: true,
       },
     ];

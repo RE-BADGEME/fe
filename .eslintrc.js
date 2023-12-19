@@ -50,5 +50,6 @@ module.exports = {
     'react/jsx-curly-brace-presence': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-no-constructed-context-values': 'off',
+    'no-extra-boolean-cast': 'off',
   },
 };

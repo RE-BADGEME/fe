@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 세로 스크롤바 스타일 */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 8px;
+  background: #f8f8f7;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999999;
+  -webkit-border-radius: 1ex;
+}
+
+/* 가로 스크롤바 스타일 */
+::-webkit-scrollbar-horizontal {
+  height: 3px;
+  width: 3px;
+  background: #f8f8f7;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #a0a0a0;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner:horizontal {
+  background: #fff3;
+}

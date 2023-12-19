@@ -1,26 +1,16 @@
-import { fetchAllData } from '@/api/fetchAllData';
-import HappyAnimation from '@/components/Common/LottieAnimation/HappyAnimation';
-import HeaderTemplate from '@/components/Common/Template/HeaderTemplate';
 import Banner from '@/components/Home/Banner/Banner';
-
-type Categories = {
-  partition: string;
-  name: string;
-  url: string;
-  npm?: string;
-};
+import Description from '@/components/Home/Description/Description';
+import Footer from '@/components/Home/Footer/Footer';
 
 const Page = async () => {
-  const data = await fetchAllData();
-
   return (
-    <HeaderTemplate>
-      <Banner />
-      {data.map((item: Categories) => (
-        <div key={item.name}>{item.name}입니다.</div>
-      ))}
-      <HappyAnimation />
-    </HeaderTemplate>
+    <section className="relative flex flex-col max-w-screen-xl w-full sm:w-4/5 min-h-screen items-center mx-auto">
+      <div className="absolute w-full flex flex-col gap-48 items-center pt-48 bg-backgroud">
+        <Banner />
+        <Description />
+        <Footer />
+      </div>
+    </section>
   );
 };
 

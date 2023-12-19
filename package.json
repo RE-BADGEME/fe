@@ -30,13 +30,16 @@
     "react-hook-form": "^7.48.2",
     "react-lottie-player": "^1.5.5",
     "recoil": "^0.7.7",
+    "recoil-persist": "^5.1.0",
     "swiper": "^11.0.5",
     "ts-jest": "^29.1.1",
+    "xlsx": "^0.18.5",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.1.5",
+    "@types/gsap": "^3.0.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^20",
     "@types/react": "^18",

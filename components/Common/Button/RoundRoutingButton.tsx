@@ -1,6 +1,7 @@
 'use client';
 
 import React, { MouseEventHandler } from 'react';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { RoundRoutingButtonProps } from './Button.types';
 
@@ -24,13 +25,15 @@ const RoundRoutingButton = ({
   };
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={handleClick}
-      className={`bg-${color} whitespace-nowrap`}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.05 }}
+      className={`bg-${color} whitespace-nowrap p-2 rounded-md animate-none hover:animate-pulse shadow-lg`}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
 
