@@ -54,6 +54,10 @@ export const librarySelection = [
     partition: 'swipe',
     name: 'SWIPER',
   },
+  {
+    partition: 'md',
+    name: 'MARKDOWN',
+  },
 ];
 
 export const basicSelection = [

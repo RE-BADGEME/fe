@@ -12,7 +12,6 @@ const handler: NextApiHandler = async (
   // parallel the query
   try {
     const { query } = req.query;
-    console.log('fetch Called');
 
     // decode query
     const decodeQuery = decodeURIComponent(query as string);
