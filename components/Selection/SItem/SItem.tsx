@@ -1,10 +1,26 @@
+import { useRecoilState } from 'recoil';
 import React from 'react';
 import Image from 'next/image';
 import { DataType } from '@/types/fetchingDataTypes';
+import { categoryAtom } from '@/atom/categoryAtom';
 
 const SItem = ({ item }: { item: DataType }) => {
+  const [selected, setSelected] = useRecoilState(categoryAtom);
+
+  const isSelected = selected.includes(item);
+
+  const handleClicked = () => {
+    return !isSelected
+      ? setSelected((prev) => [...prev, item])
+      : setSelected((prev) => prev.filter((prevItem) => prevItem !== item));
+  };
+
   return (
-    <div className="flex flex-col  items-start gap-2 p-2 rounded-md shadow-xl hover:ring hover:ring-success">
+    <button
+      type="button"
+      onClick={handleClicked}
+      className="flex flex-col  items-start gap-2 p-2 rounded-md shadow-xl hover:ring hover:ring-success"
+    >
       <Image
         src={item.url}
         alt={item.name}
@@ -19,7 +35,7 @@ const SItem = ({ item }: { item: DataType }) => {
           </p>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
