@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import mockRouter from 'next-router-mock';
 import RoundRoutingButton from './RoundRoutingButton';
+import TestWrapper from '@/__tests__/utils';
 import { AppRouterContextProviderMock } from '@/test-utils';
 
 jest.mock('next/navigation', () => jest.requireActual('next-router-mock'));
@@ -14,6 +15,8 @@ describe('RoundRoutingButtonTest', () => {
       <AppRouterContextProviderMock router={{ push }}>
         <RoundRoutingButton>test</RoundRoutingButton>
       </AppRouterContextProviderMock>,
+
+      { wrapper: TestWrapper },
     );
 
     expect(document.querySelector('button')).toBeInTheDocument();
@@ -29,6 +32,8 @@ describe('RoundRoutingButtonTest', () => {
           test
         </RoundRoutingButton>
       </AppRouterContextProviderMock>,
+
+      { wrapper: TestWrapper },
     );
 
     userEvent.click(screen.getByText('test'));
@@ -49,6 +54,8 @@ describe('RoundRoutingButtonTest', () => {
       <AppRouterContextProviderMock router={{ push }}>
         <RoundRoutingButton>test</RoundRoutingButton>
       </AppRouterContextProviderMock>,
+
+      { wrapper: TestWrapper },
     );
 
     userEvent.click(screen.getByText('test'));

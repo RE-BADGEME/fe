@@ -3,6 +3,7 @@ import { DataType } from '@/types/fetchingDataTypes';
 import SBanner from '@/components/Selection/SBanner/SBanner';
 import { getDefaultFetch } from '@/utils/getDefaultFetch';
 import getQueryFetch from '@/utils/getQueryFetch';
+import RefreshAll from '@/components/Common/Refresh/RefreshAll';
 
 const page = async ({
   searchParams,
@@ -15,8 +16,11 @@ const page = async ({
   const addData = await getQueryFetch(searchParams.query);
 
   return (
-    <div className="col-span-6 gap-3">
-      <h1 className="p-3">RESULT</h1>
+    <div className="col-span-4 gap-3">
+      <div className="w-full flex items-center justify-between p-3">
+        <h1 className="text-xl">SELECTION</h1>
+        <RefreshAll />
+      </div>
       <div className="flex flex-col items-center gap-3 p-3 h-[calc(100vh-120px)] overflow-y-scroll">
         {/* 추가 데이터 들어가는 곳 */}
         {addData &&

@@ -1,7 +1,7 @@
 export const mainText = {
   banner: {
-    h1: '세상에서 가장 쉬운 README.md 뱃지 생성기',
-    h2: 'REBADGE-ME는 누구나 쉽게 README.md에 shield.io 뱃지를 추가할 수 있도록 도와줍니다.',
+    h1: 'README SKILL Badge Generator for React/Next FE Developers',
+    h2: 'REBADGE-ME simplifies the process of adding shield.io badges to your README.md with just a few clicks. Specifically designed for React/NextJS developers, this tool helps you showcase your technical skills effortlessly.',
   },
   buttonText: {
     button1: '버튼1',

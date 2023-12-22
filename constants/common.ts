@@ -9,11 +9,11 @@
  */
 
 export const commonWords = {
-  loading: '로딩중...',
+  loading: 'Loading...',
   error: {
-    message: '에러가 발생했습니다.',
-    subMessage: '존재하지 않는 페이지입니다.',
-    goBack: '홈화면으로 가기',
+    message: '404 Not Found',
+    subMessage: 'Please try again later.',
+    goBack: 'Go Back to Home',
   },
 };
 

@@ -51,5 +51,8 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/jsx-no-constructed-context-values': 'off',
     'no-extra-boolean-cast': 'off',
+    'react/self-closing-comp': 'off',
+    'react/no-unstable-nested-components': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

@@ -1,25 +1,34 @@
-import { useRecoilState } from 'recoil';
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { DataType } from '@/types/fetchingDataTypes';
-import { categoryAtom } from '@/atom/categoryAtom';
+import useSSR from '@/hooks/useSSR';
 
 const SItem = ({ item }: { item: DataType }) => {
-  const [selected, setSelected] = useRecoilState(categoryAtom);
+  const [selected, setSelected] = useSSR();
 
-  const isSelected = selected.includes(item);
+  const isSelected = selected.some(
+    (selectedItem) => selectedItem.name === item.name,
+  );
 
   const handleClicked = () => {
     return !isSelected
       ? setSelected((prev) => [...prev, item])
-      : setSelected((prev) => prev.filter((prevItem) => prevItem !== item));
+      : setSelected((prev) =>
+          prev.filter((prevItem) => prevItem.name !== item.name),
+        );
+  };
+
+  const checkIsSelected = () => {
+    return !!isSelected ? 'ring-2 ring-success' : '';
   };
 
   return (
     <button
       type="button"
       onClick={handleClicked}
-      className="flex flex-col  items-start gap-2 p-2 rounded-md shadow-xl hover:ring hover:ring-success"
+      className={`flex flex-col items-start gap-2 p-2 rounded-md shadow-xl hover:ring hover:ring-success ${checkIsSelected()}`}
     >
       <Image
         src={item.url}

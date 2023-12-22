@@ -58,7 +58,7 @@ export const librarySelection = [
     partition: 'md',
     name: 'MARKDOWN',
   },
-];
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export const basicSelection = [
   {
@@ -85,7 +85,7 @@ export const basicSelection = [
     partition: 'office',
     name: 'OFFICE TOOL',
   },
-];
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export const selection = [
   {

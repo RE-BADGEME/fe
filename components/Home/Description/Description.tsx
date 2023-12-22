@@ -24,7 +24,12 @@ const Description = () => {
     >
       <AnimatePresence initial={false}>
         {ItemsView.map((item, index) => (
-          <Items key={item.id} view={view} index={2 - index} text={item.text} />
+          <Items
+            key={item.id}
+            view={view}
+            index={2 - index}
+            image={item.image}
+          />
         ))}
       </AnimatePresence>
     </motion.div>

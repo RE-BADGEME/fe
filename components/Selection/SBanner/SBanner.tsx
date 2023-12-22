@@ -7,6 +7,7 @@ import { DataType } from '@/types/fetchingDataTypes';
 import SItem from '../SItem/SItem';
 import ProgressCircleSVG from '@/public/svg/svgReactComponent/ProgressCircleSVG';
 import { useHorizontalScroll } from '@/hooks/useHorizontalScroll';
+import getRealCategoryName from '@/utils/getRealCategoryName';
 
 const SBanner = memo(({ category }: { category: DataType[] }) => {
   const scrollRef = useHorizontalScroll();
@@ -18,7 +19,7 @@ const SBanner = memo(({ category }: { category: DataType[] }) => {
         <ProgressCircleSVG progress={scrollXProgress} />
         <div>
           <h3>Explore by</h3>
-          <strong>{category[0].partition}</strong>
+          <strong>{getRealCategoryName(category[0].partition)}</strong>
         </div>
         <div className="w-full relative bg-white">
           <div

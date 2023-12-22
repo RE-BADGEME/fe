@@ -13,7 +13,7 @@ const SideBar = ({
     <div className="flex flex-col gap-3">
       {/* custom selection */}
       {selection.slice(1).map((item: SelectionGType) => (
-        <div key={item.selectionId} className="border-2">
+        <div key={item.selectionId} className="flex flex-col gap-2">
           <h1 className="text-xl font-bold">{item.selectionName}</h1>
           <SideList selection={item.selection} query={query} />
         </div>

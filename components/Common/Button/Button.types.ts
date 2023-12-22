@@ -9,4 +9,5 @@ export type RoundRoutingButtonProps = {
 export type SimpleButtonProps = {
   children: ReactNode;
   color?: string;
+  onClick?: () => void;
 };

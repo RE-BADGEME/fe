@@ -2,8 +2,10 @@
 
 import React, { MouseEventHandler } from 'react';
 import { motion } from 'framer-motion';
+import { useSetRecoilState } from 'recoil';
 import { useRouter } from 'next/navigation';
 import { RoundRoutingButtonProps } from './Button.types';
+import { categoryAtom } from '@/atom/categoryAtom';
 
 /**
  * @function RoundRoutingButton - 버튼을 누르면 라우팅되는 버튼
@@ -17,10 +19,12 @@ const RoundRoutingButton = ({
   routingPath = 'home',
   color = 'primary',
 }: RoundRoutingButtonProps) => {
+  const setValue = useSetRecoilState(categoryAtom);
   const navigate = useRouter();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
+    setValue([]);
     navigate.push(`/${routingPath}`);
   };
 
