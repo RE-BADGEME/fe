@@ -20,7 +20,7 @@ const Description = () => {
     <motion.div
       layout
       layoutRoot
-      className="grid grid-cols-7 w-4/5 h-96 bg-gradient-to-r from-basic via-primary to-basic"
+      className="grid grid-cols-7 w-4/5 h-fit bg-gradient-to-r from-gray-50 via-gray-400 to-gray-50"
     >
       <AnimatePresence initial={false}>
         {ItemsView.map((item, index) => (

@@ -20,51 +20,14 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <Link
-          href={'/dashboard/selection'}
+        <a
+          href={'https://github.com/RE-BADGEME/fe'}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          selection
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        <Link
-          href={'/dashboard/result'}
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          result
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        <Link
-          href={'/home'}
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          Blocks
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        <Link
-          href={'/home'}
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          Docs
-        </Link>
+          GITHUB
+        </a>
       </Typography>
     </div>
   );

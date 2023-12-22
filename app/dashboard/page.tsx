@@ -14,12 +14,12 @@ const page = ({
   const parsedQuery = getDecodeQuery(searchParams.query);
 
   return (
-    <div className="col-span-2 bg-white ">
+    <div className="col-span-2 w-full bg-white">
       <div className="w-full p-3 flex justify-between items-center">
         <h1 className="text-xl">CATEGORY</h1>
         <Reset />
       </div>
-      <div className="w-full h-[calc(100vh-120px)] overflow-y-scroll p-3">
+      <div className="w-full max-h-56 p-4 md:max-h-none md:h-[calc(100vh-150px)] overflow-y-scroll">
         <SideBar selection={selection} query={parsedQuery} />
       </div>
     </div>

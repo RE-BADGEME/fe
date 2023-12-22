@@ -12,11 +12,11 @@ const RMarkdown = () => {
   const markdown = useSSRSelector();
 
   return (
-    <div className="border-2">
+    <div className="border-2 w-full ">
       <ClipBoard markdown={markdown} />
-      <div className="p-3">
+      <div className="p-3 w-full ">
         <Markdown
-          className={`bg-white flex flex-col gap-3`}
+          className={`bg-white flex w-full overflow-x-scroll flex-col gap-3`}
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[
             rehypeRaw,
@@ -31,21 +31,21 @@ const RMarkdown = () => {
             // eslint-disable-next-line
             table: ({ node, ...props }) => (
               <table
-                className="min-w-full border border-gray-300"
+                className="w-full border border-gray-300"
                 {...props}
               ></table>
             ),
             // eslint-disable-next-line
             th: ({ node, ...props }) => (
               <th
-                className="py-2 px-4 bg-gray-100 border-b border-gray-300 font-semibold text-left"
+                className="py-2 px-4 w-full bg-gray-100 border-b border-gray-300 font-semibold text-left"
                 {...props}
               ></th>
             ),
             // eslint-disable-next-line
             td: ({ node, ...props }) => (
               <td
-                className="py-2 px-4 border-b border-gray-300"
+                className="py-2 px-4 w-full border-b border-gray-300"
                 {...props}
               ></td>
             ),

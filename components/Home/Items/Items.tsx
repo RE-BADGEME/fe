@@ -21,8 +21,8 @@ const Items = React.memo(
           ease: 'easeInOut',
           duration: 1.5,
         }}
-        className={`w-full h-full transition-colors duration-1000 ease-linear ${
-          view[index] ? 'col-span-5 bg-primary' : 'col-span-1 '
+        className={`w-full h-fit transition-colors duration-1000 ease-linear ${
+          view[index] ? 'col-span-5 bg-gray-800' : 'col-span-1 '
         }`}
       >
         {view[index] && (
@@ -34,12 +34,12 @@ const Items = React.memo(
               ease: 'easeInOut',
               delay: 1.5,
             }}
-            className="w-full h-full flex flex-col items-center justify-center"
+            className="w-full h-fit flex flex-col items-center justify-center"
           >
             <Image
               src={image}
               alt="image"
-              className="w-full h-96 object-cover object-bottom"
+              className="w-full object-contain object-center"
             />
           </motion.div>
         )}

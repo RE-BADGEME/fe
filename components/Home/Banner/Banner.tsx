@@ -18,10 +18,7 @@ const Banner = () => {
           <p className=" text-center">{mainText.banner.h2}</p>
           <div className="flex flex-col justify-center mt-3 gap-3 sm:flex-row">
             <RoundRoutingButton routingPath="dashboard/selection">
-              라이브러리 구성
-            </RoundRoutingButton>
-            <RoundRoutingButton routingPath="dashboard/result" color="white">
-              Package.json 분석
+              START
             </RoundRoutingButton>
           </div>
         </div>
