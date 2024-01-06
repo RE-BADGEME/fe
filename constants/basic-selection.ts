@@ -15,6 +15,10 @@ export const librarySelection = [
     name: 'UTILITY',
   },
   {
+    partition: 'ani',
+    name: 'ANIMATION',
+  },
+  {
     partition: 'lint',
     name: 'LINT',
   },
