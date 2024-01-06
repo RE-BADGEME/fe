@@ -55,10 +55,7 @@ export const categorySelector = selector({
             const imageMarkdown = value.url
               ? `[![${value.name}](${value.url})](${value.homepage})`
               : '';
-            const installMarkdown = value.install
-              ? `npm install ${value.install}`
-              : `[visit homepage](${value.homepage})`;
-            return `| ${imageMarkdown} | ${value.url} |\n| **INSTALL** | ${installMarkdown} |`;
+            return `| ${imageMarkdown} | ${value.url} |`;
           })
           .join('\n');
 

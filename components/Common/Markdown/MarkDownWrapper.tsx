@@ -24,23 +24,27 @@ const MarkDownWrapper = ({ markdown }: { markdown: string }) => {
         // eslint-disable-next-line
         table: ({ node, ...props }) => (
           <table
-            className="border table-fixed bg-red-200 border-gray-300"
+            className="border table-fixed border-gray-300"
             {...props}
           ></table>
         ),
         // eslint-disable-next-line
         th: ({ node, ...props }) => (
           <th
-            className="py-2 px-4 w-full bg-gray-100 border-b border-gray-300 font-semibold text-left"
+            className="py-2 px-4 even:col-span-3 whitespace-nowrap bg-gray-100 border-b border-gray-300 font-semibold text-left"
             {...props}
           ></th>
         ),
         // eslint-disable-next-line
         td: ({ node, ...props }) => (
-          <td
-            className="py-2 px-4 w-full border-b border-gray-300"
+          <td className="py-2 px-4 even:col-span-3 " {...props}></td>
+        ),
+        // eslint-disable-next-line
+        tr: ({ node, ...props }) => (
+          <tr
+            className="grid grid-cols-4  items-center border-b-2 border-gray-100"
             {...props}
-          ></td>
+          ></tr>
         ),
       }}
     >
