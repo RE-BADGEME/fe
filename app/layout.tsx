@@ -20,6 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="OIR4wZ8wR29Lo-Aue-IjqJ71QaHjHcq1gMNw2vYgJzg"
+        />
+      </head>
       <GAProvider />
       <body className={inter.className}>
         <ClientProvider>{children}</ClientProvider>
