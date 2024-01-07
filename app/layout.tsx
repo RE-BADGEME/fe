@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import ClientProvider from '@/components/Provider/ClientProvider';
@@ -26,6 +27,16 @@ export default function RootLayout({
           content="OIR4wZ8wR29Lo-Aue-IjqJ71QaHjHcq1gMNw2vYgJzg"
         />
       </head>
+      <Script
+        id="google-analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-46PJBDZTCH"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-46PJBDZTCH');
+        `}
+      </Script>
       <GAProvider />
       <body className={inter.className}>
         <ClientProvider>{children}</ClientProvider>
