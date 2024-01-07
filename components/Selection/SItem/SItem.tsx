@@ -28,7 +28,7 @@ const SItem = ({ item }: { item: DataType }) => {
     <button
       type="button"
       onClick={handleClicked}
-      className={`flex flex-col items-start gap-2 p-2 rounded-md shadow-xl hover:ring hover:ring-success ${checkIsSelected()}`}
+      className={`flex flex-col items-start gap-2 p-2 rounded-md shadow-xl  ${checkIsSelected()}`}
     >
       <MarkDownWrapper markdown={`![${item.name}](${item.url})`} />
       <div className="flex flex-col gap-1">

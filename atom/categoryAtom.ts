@@ -24,7 +24,7 @@ const { persistAtom } = recoilPersist({
   storage: sessionStorage,
 });
 
-const defaultMarkdown = `<== Click the badge button to load markdown badges`;
+const defaultMarkdown = `Click the badge button to load markdown badges`;
 
 export const categoryAtom = atom<DataType[]>({
   key: 'categoryAtom',

@@ -1,9 +1,17 @@
-import { Tooltip } from '@material-tailwind/react';
+import { Switch, Tooltip } from '@material-tailwind/react';
 import React, { useState } from 'react';
 import { debounce } from 'lodash-es';
 import CopySVG from '@/public/svg/svgReactComponent/CopySVG';
 
-const ClipBoard = ({ markdown }: { markdown: string }) => {
+const ClipBoard = ({
+  markdown,
+  view,
+  fn,
+}: {
+  markdown: string;
+  view: boolean;
+  fn: () => void;
+}) => {
   const [mouseOver, setMouseOver] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -22,7 +30,16 @@ const ClipBoard = ({ markdown }: { markdown: string }) => {
 
   return (
     <div className="flex items-center relative w-full p-3 h-16 bg-gray-300 justify-between">
-      <p>MARKDOWN</p>
+      <div className="flex items-center gap-2">
+        <p>MARKDOWN</p>
+        <Switch
+          crossOrigin="anonymous"
+          checked={view}
+          onChange={fn}
+          label={`${view ? 'table' : 'raw'} view`}
+        />
+      </div>
+
       {copied ? (
         <p className="absolute right-3">Copied!</p>
       ) : (
