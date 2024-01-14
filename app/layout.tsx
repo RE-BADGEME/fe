@@ -26,6 +26,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="OIR4wZ8wR29Lo-Aue-IjqJ71QaHjHcq1gMNw2vYgJzg"
         />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <Script
         id="google-analytics"
