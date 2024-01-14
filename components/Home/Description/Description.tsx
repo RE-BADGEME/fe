@@ -11,7 +11,7 @@ const Description = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setView((prev) => [...prev.slice(1), prev[0]]);
-    }, 1000 * 15);
+    }, 1000 * 5);
 
     return () => clearInterval(timer);
   }, []);
