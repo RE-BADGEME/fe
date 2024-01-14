@@ -9,9 +9,9 @@ import GAProvider from '@/components/Provider/GAProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'REBADGE-ME',
+  title: 'REBADGE-ME | Simple Shield.io Badge Generator',
   description:
-    'README SKILL Badge Generator, Specifically designed for React/NextJS developers',
+    'README SKILL Badge Generator, Specifically designed for React/NextJS developers. Feel free to use it for your own project!',
 };
 
 export default function RootLayout({
