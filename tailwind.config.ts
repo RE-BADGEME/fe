@@ -25,7 +25,7 @@ const config: Config = withMT({
       },
 
       colors: {
-        primary: '#ff6e59',
+        primary: '#A0A603',
         secondary: '#ffece9',
         success: '#4ab783',
         basic: '#F2CFC2',
@@ -42,6 +42,8 @@ const config: Config = withMT({
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'background-image': 'url("/public/image/BG-IMAGE.png")',
+        'bg-asset': 'url("/asset/bg/BG-IMAGE.png")',
       },
     },
   },

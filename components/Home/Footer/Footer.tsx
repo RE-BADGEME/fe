@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-56 bg-backgroud">
+    <div className="flex flex-col items-center justify-center w-full h-56">
       <div className="flex flex-col items-center justify-center animate-bounce hover:cursor-pointer">
         <Link href={'https://github.com/RE-BADGEME/fe'}>
           <div className="flex flex-col items-center justify-center">

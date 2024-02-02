@@ -1,15 +1,15 @@
+import Background from '@/components/Home/Background/Background';
 import Banner from '@/components/Home/Banner/Banner';
-import Description from '@/components/Home/Description/Description';
-import Footer from '@/components/Home/Footer/Footer';
+// import Description from '@/components/Home/Description/Description';
+// import Footer from '@/components/Home/Footer/Footer';
 
 const Page = async () => {
   return (
-    <section className="relative flex flex-col w-screen min-h-screen items-center mx-auto">
-      <div className="absolute w-full flex flex-col gap-24 items-center pt-48 bg-backgroud">
+    <section className="w-full h-screen relative">
+      <div className="absolute z-10 flex flex-col w-full items-center top-52 justify-start">
         <Banner />
-        <Description />
-        <Footer />
       </div>
+      <Background />
     </section>
   );
 };
