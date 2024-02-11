@@ -4,7 +4,7 @@ import RoundRoutingButton from '@/components/Common/Button/RoundRoutingButton';
 
 const Banner = () => {
   return (
-    <div className="w-full flex justify-center items-center ">
+    <div className="w-full flex justify-center items-center text-white">
       <div className="flex flex-col items-center gap-3 ">
         <div className="flex flex-col items-center gap-2">
           <h1 className="text-lg w-full sm:text-2xl text-center font-extrabold tracking-wide">
