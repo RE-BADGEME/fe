@@ -30,8 +30,13 @@ const SideItem = ({
   };
 
   return (
-    <div className={`${IsAlreadySelected ? 'text-primary' : 'text-black'}`}>
+    <div
+      className={`flex justify-between ${
+        IsAlreadySelected ? 'text-primary' : 'text-black'
+      }`}
+    >
       <Link href={`${getValidQuery()}`}>{sideItem.name}</Link>
+      {IsAlreadySelected && <p>selected</p>}
     </div>
   );
 };
