@@ -1,17 +1,14 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import React from 'react';
-import { Inter } from 'next/font/google';
 import ClientProvider from '@/components/Provider/ClientProvider';
 import './globals.css';
 import GAProvider from '@/components/Provider/GAProvider';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
-  title: 'REBADGE-ME | Simple Shield.io Badge Generator',
+  title: 'REBADGE-ME | README TABLE for Skill Badge',
   description:
-    'README SKILL Badge Generator, Specifically designed for React/NextJS developers. Feel free to use it for your own project!',
+    'README TABLE for Skill Badge, REBADGE-ME streamlines the process of adding attractive and informative skill badges from https://shields.io/ to your README.md file, making your profile stand out!',
 };
 
 export default function RootLayout({
@@ -39,7 +36,7 @@ export default function RootLayout({
         `}
       </Script>
       <GAProvider />
-      <body className={inter.className}>
+      <body className="font-basic">
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>

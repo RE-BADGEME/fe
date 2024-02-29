@@ -24,6 +24,11 @@ const config: Config = withMT({
         xl: '1280px',
       },
 
+      fontFamily: {
+        basic: ['SairaCondensed-Medium', 'sans-serif'],
+        protest: ['Protest Strike', 'sans-serif'],
+      },
+
       colors: {
         primary: '#ff6e59',
         secondary: '#ffece9',

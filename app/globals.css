@@ -31,3 +31,13 @@
 ::-webkit-scrollbar-corner:horizontal {
   background: #fff3;
 }
+
+@font-face {
+  font-family: 'Protest Strike';
+  src: url('../assets/fonts/ProtestStrike-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SairaCondensed-Medium';
+  src: url(../assets//fonts/SairaCondensed-Medium.ttf);
+}
