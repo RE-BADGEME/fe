@@ -18,7 +18,7 @@ const page = async ({
   return (
     <div className="flex flex-col w-full md:col-span-4 gap-3 ">
       <div className="w-full flex items-center justify-between p-3">
-        <h1 className="text-xl">SELECTION</h1>
+        <h1 className="text-xl font-protest">SELECTION</h1>
         <RefreshAll />
       </div>
       <div className="flex flex-col items-center gap-3 px-3 pt-1 max-h-96 md:max-h-none md:h-[calc(100vh-150px)] overflow-y-scroll">

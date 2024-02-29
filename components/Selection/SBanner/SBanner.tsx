@@ -14,7 +14,7 @@ const SBanner = memo(({ category }: { category: DataType[] }) => {
   const { scrollXProgress } = useScroll({ container: scrollRef });
 
   return (
-    <div className="w-full flex items-center justify-center bg-gradient-to-t from-gray-400 to-gray-200 rounded-lg p-1 shadow-sm hover:ring hover:ring-blue-500">
+    <div className="w-full flex items-center justify-center bg-gradient-to-t from-gray-400 to-gray-200 rounded-lg p-1 shadow-sm">
       <div className="w-full rounded-lg px-6 py-8 bg-white relative">
         <ProgressCircleSVG progress={scrollXProgress} />
         <div>
