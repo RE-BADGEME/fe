@@ -68,3 +68,42 @@ export const categorySelector = selector({
     return categories.length === 0 ? defaultMarkdown : markdown.join('\n');
   },
 });
+
+export const categorySimpleSelector = selector({
+  key: 'categorySimpleSelector',
+  get: ({ get }) => {
+    const categories = get(categoryAtom);
+
+    // Group items by partition
+    const groupedCategories: Record<string, DataType[]> = {};
+    categories.forEach((item) => {
+      if (!groupedCategories[item.partition]) {
+        groupedCategories[item.partition] = [];
+      }
+      groupedCategories[item.partition].push(item);
+    });
+
+    const markdown = Object.entries(groupedCategories).map(
+      ([partition, values]) => {
+        const tableRows = values
+          .map((value) => {
+            const imageMarkdown = value.url
+              ? `[![${value.name}](${value.url})](${value.homepage})`
+              : '';
+            return `${imageMarkdown}`;
+          })
+          .join(' ');
+
+        return `### ${getRealCategoryName(partition)}
+        \n${tableRows}`;
+      },
+    );
+
+    return categories.length === 0 ? defaultMarkdown : markdown.join('\n');
+  },
+});
+
+export const categorySelectorAtom = atom<boolean>({
+  key: 'categorySelectorAtom',
+  default: false,
+});

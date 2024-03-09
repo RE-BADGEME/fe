@@ -118,5 +118,3 @@
 ## 🔗 Links
 
 [![FIGMA](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/wwBhV6E4GxZ40tfZTM22oC/Untitled?type=whiteboard&node-id=0%3A1&t=Pvs6kZlJiCS8480b-1)
-
-## SKILLS

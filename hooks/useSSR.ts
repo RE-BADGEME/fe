@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { categoryAtom, categorySelector } from '@/atom/categoryAtom';
+import {
+  categoryAtom,
+  categorySelector,
+  categorySelectorAtom,
+  categorySimpleSelector,
+} from '@/atom/categoryAtom';
 
 const defaultValue = [
   {
@@ -29,8 +34,11 @@ export default useSSR;
 const selectorDefaultValue = `LOADING MARKDOWN BADGES...`;
 
 export const useSSRSelector = () => {
+  const selection = useRecoilValue(categorySelectorAtom);
   const [isInitial, setInitial] = useState(true);
-  const value = useRecoilValue(categorySelector);
+  const value = useRecoilValue(
+    selection ? categorySelector : categorySimpleSelector,
+  );
 
   useEffect(() => {
     setInitial(false);

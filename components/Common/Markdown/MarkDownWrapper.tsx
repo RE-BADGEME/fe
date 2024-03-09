@@ -22,6 +22,11 @@ const MarkDownWrapper = ({ markdown }: { markdown: string }) => {
           <h1 className="text-2xl uppercase" {...props}></h1>
         ),
         // eslint-disable-next-line
+        h3: ({ node, ...props }) => (
+          // eslint-disable-next-line
+          <h3 className="text-xl uppercase" {...props}></h3>
+        ),
+        // eslint-disable-next-line
         table: ({ node, ...props }) => (
           <table
             className="border table-fixed border-gray-300"
@@ -46,6 +51,8 @@ const MarkDownWrapper = ({ markdown }: { markdown: string }) => {
             {...props}
           ></tr>
         ),
+        // eslint-disable-next-line
+        p: ({ node, ...props }) => <p className="flex" {...props}></p>,
       }}
     >
       {markdown}

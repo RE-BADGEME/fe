@@ -55,7 +55,9 @@ const NavbarSimple = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5"
         >
-          <Link href={'/home'}>REBADGE-ME</Link>
+          <Link href={'/home'} className=" text-2xl font-protest text-primary">
+            REBADGE-ME
+          </Link>
         </Typography>
         <div className="hidden lg:block">
           <NavList />
